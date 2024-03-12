@@ -1,38 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <title>Document</title>
-</head>
-
-<body>
-    <div id = "container">
-        <div id="image">
-            <img src="Wavy_Gen-01_Single-07-Photoroom.png-Photoroom.png" alt="Registration Icon Image">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style.css">
+        <title>Document</title>
+    </head>
+    
+    <body>
+        <div id="container">
+            <div id="image">
+                <img src="Wavy_Gen-01_Single-07-Photoroom.png-Photoroom.png" alt="Registration Icon Image">
         </div>
-        <div id="Form"> 
-       
-            <form>
+        <div id="Form">
+            
+            <form id="formid">
                 <h1> User Registration </h1>
                 <hr>
-                <label for="Name">Name : </label>
-                <input type="text" placeholder="Enter Your Name"><br>
-
-                <label for="Contact"> Contact Number : </label>
-                <input type="number" placeholder="Enter Your Number"><br>
-
-                <label for="Age"> Age : </label>
-                <input type="text" placeholder="Enter Your Age"><br>
-
-                <label for="Course"> City : </label>
-                <input type="text" placeholder="Enter Your City">
+                <label  >First Name : </label>
+                <input type="text" placeholder="Enter Your First Name" id="firstname" required><br>
+                
+                <label > Last Name : </label>
+                <input type="text" id="lastname" placeholder="Enter Your Last Name" required>
                 <br>
+                
+                <label  > Roll Number : </label>
+                <input type="number" id="rollno" placeholder="Enter Your Roll Number" required><br>
+                
+                <label > Age : </label>
+                <input type="text" id="age"  placeholder="Enter Your Age" required><br>
+                
+                <label > Date of Birth : </label>
+                <input type="date" id="date">
+                <br>
+                
 
-                <label for="State"> State : </label>
-                <select name="State">
+                <label > State : </label>
+                <select name="State" id="state" required>
                     <option> Select </option>
                     <option>Andhra Pradesh</option>
                     <option>Arunachal Pradesh</option>
@@ -74,31 +79,43 @@
                 </select>
                 <br>
 
-
-                <label for="Gender"> Gender : </label>
-                <select name="Gender" id="">
-                    <option> Select</option>
-                    <option> Male </option>
-                    <option> Female </option>
-                    <option> Other</option>
-                </select>
-                <br>
-
-                <label for="Address">Address : </label>
-                <textarea name="Address" cols="30" rows="5"></textarea>
-                <br>
-
                 
-                <button type="submit"> Submit </button>
+                <label > Gender : </label>
+                <input type="radio" name="rad" class = "rad" required>
+                <label> Male </label>
+                <input type="radio" name="rad" class = "rad">
+                <label> Female </label>
+                <input type="radio" name="rad" class = "rad">
+                <label> Other </label>
+                <br>
+                
+                
+                <label > Hobbies : </label>
+                <textarea id="hobbies" placeholder="Enter Your Hobbies"></textarea>
+                <br>
+                
+                
+                <label >Address : </label>
+                <textarea name="Address" cols="30" rows="5" required></textarea>
+                <br>
+                
+                
+                <button type="submit" onclick="submitdetails()"> Submit </button>
                 <button type="reset"> Reset </button>
-
-
-            </form>
+                
+                <br>
+                <label> Enter Roll No to view details : </label>
+                <input type="number" id="getrno">
         
+
+                <input type="button" onclick="getdetails()" value="Get Details"> 
+                
+            </form>
+
         </div>
 
     </div>
+    <script src="./main.js"></script>
 </body>
-<script src="./main.js"></script>
 
 </html>

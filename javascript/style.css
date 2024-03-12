@@ -43,6 +43,10 @@ label{
     font-size: 15px;
     font-weight: 700;
 }
+.rad{
+    width: auto;
+    border-radius: 0px;
+}
 form{
     height: 100%;
     width: 500px;
@@ -60,7 +64,7 @@ button{
     border: none;
     border-radius: 5px;
     height: 30px;
-    width: 80px;
+    width: 120px;
     font-family: 'Comic Sans MS';
     font-weight: 400;
     font-size: 16px;
